@@ -1,2 +1,2 @@
 # portfolio-website
-I createed my simple Portfolio Website using Flask.
+I created my simple Portfolio Website using Flask.
