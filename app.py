@@ -30,8 +30,8 @@ def submit_contact():
         # Compose the email
         msg = Message(
             subject=f"Contact Form Submission: {subject}",
-            sender=email,
-            recipients=[os.getenv('MAIL_USERNAME')],  # Replace with your email
+            sender=app.config['MAIL_USERNAME'],
+            recipients=[app.config['MAIL_USERNAME']],  # Replace with your email
             body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
         )
 
