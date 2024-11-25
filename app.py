@@ -1,20 +1,21 @@
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contact_form.db'
-db = SQLAlchemy(app)
 
-class ContactFormSubmission(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
-    email = db.Column(db.String(100))
-    subject = db.Column(db.String(200))
-    message = db.Column(db.Text())
+# Configure Flask-Mail
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 
-
-with app.app_context():
-    db.create_all()
+mail = Mail(app)
 
 # Define a route for the contact form submission
 @app.route('/submit_contact', methods=['POST'])
@@ -26,20 +27,19 @@ def submit_contact():
         subject = request.form.get('subject')
         message = request.form.get('message')
 
-        submission = ContactFormSubmission(
-            name=name,
-            email=email,
-            subject=subject,
-            message=message
+        # Compose the email
+        msg = Message(
+            subject=f"Contact Form Submission: {subject}",
+            sender=email,
+            recipients=[os.getenv('MAIL_USERNAME')],  # Replace with your email
+            body=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
         )
 
-        # Add the submission to the database and commit the transaction
-        db.session.add(submission)
-        db.session.commit()
+        # Send the email
+        mail.send(msg)
 
         # Redirect to a thank-you page
         return render_template('thank_you.html')
-
 
 # Define routes for different pages
 @app.route('/')
@@ -64,6 +64,3 @@ def contact():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-

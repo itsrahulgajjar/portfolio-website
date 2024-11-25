@@ -1,77 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Rahul Gajjar</title>
     <style>
+        /* Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
             margin: 0;
             padding: 0;
         }
+
+        /* Header Styling */
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(45deg, #4caf50, #2196f3);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 60px 20px;
         }
-        h1 {
-            font-size: 36px;
-            margin: 0;
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        .skills-container {
+
+        /* Section Styling */
+        section {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .skill {
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4caf50;
+        }
+
+        section .experience-item {
             margin-bottom: 20px;
         }
-        .skill-label {
+
+        section .experience-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        section .experience-details {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        section ul {
+            margin-left: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
             font-weight: bold;
         }
-        .progress-bar {
-            background-color: #eee;
-            border-radius: 5px;
-            height: 20px;
-        }
-        .progress {
-            background-color: #007bff;
-            border-radius: 5px;
-            height: 100%;
-            width: 80%;
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Skills</h1>
+        <h1>Professional Experience</h1>
     </header>
-    <div class="skills-container">
-        <div class="skill">
-            <p class="skill-label">Python</p>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
+
+    <!-- Experience Section -->
+    <section>
+
+        <div class="experience-item">
+            <p class="experience-title">Promact Infotech</p>
+            <p class="experience-details">SDE - I (Python-AI Developer) | Nov 2023 - Present | Vadodara</p>
+            <ul>
+                <li>Integrated generative AI models such as Gemini, GPT, and Hugging Face through APIs to enhance application functionality.</li>
+                <li>Implemented the LangChain framework to enhance generative AI applications and capabilities.</li>
+                <li>Employed Langfuse for effective prompt versioning and management in AI workflows.</li>
+                <li>Developed and integrated APIs using Flask to streamline operations and improve user experience.</li>
+                <li>Utilized advanced data scraping techniques to efficiently gather and process data.</li>
+                <li>Leveraged Postman for API testing, debugging, and ensuring robust performance.</li>
+                <li>Managed and optimized PostgreSQL databases for scalable, data-driven solutions.</li>
+            </ul>
         </div>
-        <div class="skill">
-            <p class="skill-label">Web Development</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 70%;"></div>
-            </div>
+
+        <div class="experience-item">
+            <p class="experience-title">Promact Infotech</p>
+            <p class="experience-details">Internship (Python-AI Developer) | Sep 2023 - Nov 2023 | Vadodara</p>
+            <ul>
+                <!-- Add specific internship details here -->
+                <li>Worked on foundational AI tools and workflows to support Python-based applications.</li>
+                <li>Contributed to research and model deployment tasks, learning industry best practices.</li>
+            </ul>
         </div>
-        <div class="skill">
-            <p class="skill-label">Machine Learning</p>
-            <div class="progress-bar">
-                <div class="progress" style="width: 90%;"></div>
-            </div>
-        </div>
-    </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed with ❤️ by Rahul Gajjar | <a href="/contact">Get in Touch</a></p>
+    </footer>
 </body>
 </html>
-

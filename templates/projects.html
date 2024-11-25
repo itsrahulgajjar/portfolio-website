@@ -1,76 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Rahul Gajjar</title>
     <style>
+        /* Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
             margin: 0;
             padding: 0;
         }
+
+        /* Header Styling */
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(45deg, #4caf50, #2196f3);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 60px 20px;
         }
-        h1 {
-            font-size: 36px;
-            margin: 0;
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        .projects-container {
+
+        /* Section Styling */
+        section {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4caf50;
+        }
+
         .project {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
+
         .project-title {
             font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
         }
-        .project-description {
-            margin-top: 10px;
-        }
-        .technologies-used {
+
+        .project-date {
             font-style: italic;
-            margin-top: 10px;
+            color: #555;
+            margin-bottom: 10px;
         }
-        .project-link {
-            margin-top: 10px;
+
+        .project-description {
+            margin-bottom: 10px;
+        }
+
+        .project-link a {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Projects</h1>
+        <h1>My Projects</h1>
     </header>
-    <div class="projects-container">
+
+    <!-- Projects Section -->
+    <section>
+
         <div class="project">
-            <p class="project-title">Project 1: Static PE Malware Detection using Machine Learning</p>
+            <p class="project-title">Flask Based Generative AI APIs</p>
+            <p class="project-date">June, 2023</p>
             <p class="project-description">
-                Created a model with machine learning classifiers to detect PE (Portable Executable) Malware. Used Feature importance plot by Python to improve the model’s accuracy and reduce the execution time of the classifier.
+                Developed a Flask-based web application providing AI-driven APIs for text-to-speech generation, document summarization, heading generation, and text similarity analysis. Integrated OpenAI, Google Generative AI, and Azure Blob Storage to enable advanced NLP tasks with secure and scalable cloud storage.
             </p>
-            <p class="technologies-used">
-                Technologies Used: Python, Machine Learning
-            </p>
+            <p class="project-link"><a href="https://github.com/itsrahulgajjar/Flask-Based-Generative-AI-APIs" target="_blank">View Project</a></p>
         </div>
+
         <div class="project">
-            <p class="project-title">Project 2: Traffic Sign Recognition Model</p>
+            <p class="project-title">Indian Legal Act and Sections Scrapper</p>
+            <p class="project-date">March, 2023</p>
             <p class="project-description">
-                Developed a CNN-based model that accurately predicts traffic signs using deep learning techniques and provides their
-names to the GUI, contributing to improved safety and efficiency in transportation.
+                Developed a Python-based scraper using Selenium to extract acts, sections, and details from the India Code website. Automated data extraction and pagination handling, saving results in a structured JSON format. Enabled efficient organization of legal data for research and analysis.
             </p>
-            <p class="technologies-used">
-                Technologies Used: Python, Machine Learning
-            </p>
+            <p class="project-link"><a href="https://github.com/itsrahulgajjar/Scrapping" target="_blank">View Project</a></p>
         </div>
-    </div>
+
+        <div class="project">
+            <p class="project-title">Static PE Malware Detection using Machine Learning</p>
+            <p class="project-date">January, 2023</p>
+            <p class="project-description">
+                Utilized machine learning classifiers from PyCaret to detect PE (Portable Executable) Malware based on features. Leveraged the feature importance plot in Python to identify and select the most important features, reducing the number of features used. This optimization improved model accuracy and significantly reduced execution time.
+            </p>
+            <p class="project-link"><a href="https://github.com/itsrahulgajjar/Static-PE-Malware-Detection" target="_blank">View Project</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed with ❤️ by Rahul Gajjar | <a href="/contact">Get in Touch</a></p>
+    </footer>
 </body>
 </html>
-

@@ -1,75 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* Global Styling */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        h1 {
-            font-size: 36px;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+            padding: 0;
             margin: 0;
         }
-        p {
-            font-size: 18px;
-            margin: 20px 0;
-        }
-        .profile-photo {
-            max-width: 300px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto;
-        }
-        nav {
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(45deg, #4caf50, #2196f3);
+            color: white;
             text-align: center;
-            margin-top: 20px;
+            padding: 60px 20px;
         }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid white;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-links .icon {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links .icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            margin: 0 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease, background 0.3s ease;
         }
+
         nav a:hover {
-            color: #555;
+            background: #2196f3;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2196f3;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <img src="./static/photo.jpg" alt="Photo" width="200" height="200"> 
+        <img class="profile-photo" src="./static/photo.jpg" alt="Rahul Gajjar">
         <h1>Rahul Gajjar</h1>
-        <p>AI/ML Developer</p>
+        <p>Python(AI/ML) Developer</p>
+        <div class="social-links">
+            <a href="https://github.com/itsrahulgajjar" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/rahul-gajjar-b1260a161" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+        </div>
     </header>
+
+    <!-- Navigation -->
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/skills">Skills</a>
+        <a href="/about">Education</a>
+        <a href="/skills">Experience</a>
         <a href="/projects">Projects</a>
         <a href="/contact">Contact</a>
     </nav>
+
+    <!-- About Section -->
     <section>
         <h2>About Me</h2>
         <p>
-            Hello, I'm Rahul Gajjar, a passionate and enthusiastic AI/ML developer with a strong desire to explore the world of artificial intelligence and machine learning. I'm thrilled to embark on this exciting journey where technology meets innovation.
+            Hello, I'm Rahul Gajjar.
         </p>
         <p>
-            My fascination with AI/ML led me to work on several hands-on projects, including Static PE Malware Detection using Machine Learning and Traffic Sign Recognition Model. These experiences allowed me to apply my knowledge and gain practical insights into developing predictive models, working with big data, and optimizing algorithms for performance.
+            Microsoft Certified: Azure AI Fundamentals and Python-AI Developer with expertise in Python, NLP, and generative AI. Skilled in integrating AI models via APIs, leveraging LangChain and Langfuse for workflow optimization, and developing Flask-based APIs. Proficient in data scraping, API testing with Postman, and managing PostgreSQL databases to deliver scalable, data-driven solutions.
         </p>
         <p>
             I am eager to contribute my skills and creativity to tackle challenges in AI/ML, and I am constantly exploring new techniques and technologies to stay at the forefront of this rapidly evolving field. I believe in the power of collaboration and am excited to work with like-minded professionals to push the boundaries of what AI/ML can achieve.
         </p>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed with ❤️ by Rahul Gajjar | <a href="/contact">Get in Touch</a></p>
+    </footer>
 </body>
 </html>
-

@@ -1,84 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Rahul Gajjar</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* Global Styling */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            padding: 0;
+        }
+
+        /* Header Styling */
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(45deg, #4caf50, #2196f3);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 60px 20px;
         }
-        h1 {
-            font-size: 36px;
-            margin: 0;
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
+
+        /* Form Container Styling */
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        label {
+
+        .contact-form label {
             font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="text"] {
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
         }
-        textarea {
-            width: 100%;
+
+        .contact-form textarea {
             height: 150px;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
-        button[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
+
+        .contact-form button[type="submit"] {
+            background: #4caf50;
+            color: white;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background: #2196f3;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Contact Me</h1>
     </header>
+
+    <!-- Contact Form -->
     <div class="contact-form">
         <form action="/submit_contact" method="post">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
 
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed with ❤️ by Rahul Gajjar | <a href="/contact">Get in Touch</a></p>
+    </footer>
 </body>
 </html>
-
